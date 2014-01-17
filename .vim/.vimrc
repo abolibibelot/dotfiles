@@ -68,6 +68,10 @@ set laststatus=2
 set relativenumber
 set undofile
 
+" No stupid backup files
+set nobackup
+set nowritebackup
+
 " search and replace settings
 nnoremap / /\v
 vnoremap / /\v
