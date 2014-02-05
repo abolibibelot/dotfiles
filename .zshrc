@@ -56,7 +56,38 @@ export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/
 
 export EDITOR="vim"
 
-# Compilation flags
+export M2_HOME="/usr/local/apache-maven/apache-maven-3.1.1"
+export M2=$M2_HOME/bin
+
+export PATH="$M2:$PATH"
+
+
+# History settings
+export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd:cd ..:cd.."
+export HISTSIZE=25000
+export HISTFILE=~/.zsh_history
+export SAVEHIST=10000
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+setopt HIST_VERIFY
+
+# Prompts for confirmation after 'rm *' etc
+# Helps avoid mistakes like 'rm * o' when 'rm *.o' was intended
+setopt RM_STAR_WAIT
+
+# Better safe than sorry
+alias 'rm=rm -i'
+alias 'mv=mv -i'
+alias 'cp=cp -i'
+
+# Don’t write over existing files with >, use >! instead
+setopt NOCLOBBER
+
+# some more aliases
+alias 'tf=tail -F'
+
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh

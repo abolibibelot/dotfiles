@@ -18,6 +18,9 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
 Bundle 'tomasr/molokai'
 Bundle 'rking/ag.vim'
+Bundle 'derekwyatt/vim-scala'
+Bundle 'guns/vim-clojure-static'
+Bundle 'tpope/vim-fireplace'
 
 let mapleader=","
 colorscheme molokai
@@ -71,6 +74,13 @@ set undofile
 " No stupid backup files
 set nobackup
 set nowritebackup
+set noswapfile
+
+" Sensible settings for undo
+set undodir=~/.vim/undodir
+set undofile
+set undolevels=1000 "maximum number of changes that can be undone
+set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 
 " search and replace settings
 nnoremap / /\v
