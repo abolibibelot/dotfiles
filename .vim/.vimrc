@@ -21,6 +21,7 @@ Bundle 'rking/ag.vim'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'guns/vim-clojure-static'
 Bundle 'tpope/vim-fireplace'
+Bundle 'davidhalter/jedi-vim'
 
 let mapleader=","
 colorscheme molokai
@@ -44,6 +45,7 @@ augroup filetypedetect
   au BufNewFile,BufRead *.pig set filetype=pig syntax=pig
   au BufNewFile,BufRead *.scala set filetype=scala syntax=scala
   autocmd FileType ruby,eruby,yaml,java,sh,javascript set sw=2 sts=2
+  au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 augroup END
 
 
@@ -105,4 +107,5 @@ set formatoptions=qrn1
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
-
+" sudoing!
+cnoremap sudow w !sudo tee % >/dev/null

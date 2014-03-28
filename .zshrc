@@ -58,8 +58,9 @@ export EDITOR="vim"
 
 export M2_HOME="/usr/local/apache-maven/apache-maven-3.1.1"
 export M2=$M2_HOME/bin
+export GRADLE_HOME='/opt/gradle/bin'
 
-export PATH="$M2:$PATH"
+export PATH="$M2:$GRADLE_HOME:$PATH"
 
 
 # History settings
